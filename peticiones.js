@@ -44,7 +44,7 @@ fetch("https://caupolican.admin.kevinroldankr2024chile.cl/items/Usuarios", reque
     redirect: 'follow'
   };
   
-  fetch("https://caupolican.admin.kevinroldankr2024chile.cl/items/Usuarios/1", requestOptions)
+  fetch("https://caupolican.admin.kevinroldankr2024chile.cl/items/Usuarios?filter[email][_eq]=diegobarrionuevo11@gmail.com", requestOptions)
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error)); */
@@ -80,3 +80,38 @@ fetch("https://caupolican.admin.kevinroldankr2024chile.cl/items/compras", reques
 
 // hay que entender y ver la manera en que se cargan los archivos y asi recien desarrollar la subida de los mismos
 // a la base de datos
+
+
+/* const fileType = (buffer) => {
+    // Firmas (magic numbers) de los formatos de archivo
+    const pdfSignature = [0x25, 0x50];
+    const pngSignature = [0x89, 0x50, 0x4e, 0x47];
+    const jpgSignature = [0xFF, 0xD8, 0xFF];
+
+    // Verificación de la firma del PDF
+    if (buffer[0] === pdfSignature[0] && buffer[1] === pdfSignature[1]) {
+        return ['pdf', 'application/pdf'];
+    }
+
+    // Verificación de la firma del PNG
+    if (
+        buffer[0] === pngSignature[0] &&
+        buffer[1] === pngSignature[1] &&
+        buffer[2] === pngSignature[2] &&
+        buffer[3] === pngSignature[3]
+    ) {
+        return ['png', 'image/png'];
+    }
+
+    // Verificación de la firma del JPG
+    if (
+        buffer[0] === jpgSignature[0] &&
+        buffer[1] === jpgSignature[1] &&
+        buffer[2] === jpgSignature[2]
+    ) {
+        return ['jpeg', 'image/jpeg'];
+    }
+
+    // Si no se detecta ninguna firma conocida
+    return 'unknown';
+} */
