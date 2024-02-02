@@ -1,0 +1,16 @@
+{
+  "name": "argon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "passwordVerify.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "argon2": "^0.31.2"
+  }
+}
